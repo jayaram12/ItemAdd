@@ -23,6 +23,7 @@
     <link href="css/multi-select.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Charmonman|Crimson+Text|Exo+2|Indie+Flower|Kodchasan|Lobster|Mali|Montserrat|Niramit|Nunito+Sans|Quicksand|Roboto|Ubuntu|Work+Sans" rel="stylesheet">
     <link href="css/sweetalert.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css" />
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -400,12 +401,13 @@
                                                             </div>
                                                             </div>
                                                             <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-                                                              <label class="control-label pull-left">Select Main Image :</label><br/><br/>
-                                                              <div class="wrap-custom-file">
+                                                              <!-- <label class="control-label pull-left">Select Main Image :</label><br/><br/> -->
+                                                              <div class="wrap-custom-file" style="width:200px; height:200px;">
                                                                   <input type="file" name="image" id="image" accept=".gif, .jpg, .png" />
                                                                   <label  for="image">
-                                                                      <span></span>
+                                                                      <span>Select Default Image</span>
                                                                   </label>
+                                                                  <i class="fa fa-times"></i>
                                                               </div>
                                                             </div>
                                                             <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
@@ -424,6 +426,7 @@
                                                               <label  for="image1">
                                                                 <span>Select Image One</span>
                                                               </label>
+                                                              <i class="fa fa-times"></i>
                                                               </div>
 
                                                               <div class="wrap-custom-file">
@@ -431,6 +434,7 @@
                                                               <label  for="image2">
                                                                 <span>Select Image Two</span>
                                                               </label>
+                                                              <i class="fa fa-times"></i>
                                                               </div>
 
                                                               <div class="wrap-custom-file">
@@ -438,6 +442,7 @@
                                                               <label  for="image3">
                                                                 <span>Select Image Three</span>
                                                               </label>
+                                                              <i class="fa fa-times"></i>
                                                               </div>
 
                                                               <div class="wrap-custom-file">
@@ -445,6 +450,7 @@
                                                               <label  for="image4">
                                                                 <span>Select Image Four</span>
                                                               </label>
+                                                              <i class="fa fa-times"></i>
                                                               </div>
                                                             </div>
                                                           </div>
@@ -492,7 +498,7 @@
                             		<div id="tab1" class="tab-slider--body clearfix">
                                   <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                                   <div class="form-group MarginTop20 col-md-12">
-                                      <label class="control-label col-md-4">Default Font :</label>
+                                      <label class="control-label col-md-4 MarginTop10">Default Font :</label>
                                       <div class="col-md-6">
                                         <!-- <input type="text" class="form-control" value="Montserrat" style="font-family: 'Montserrat', sans-serif;"/> -->
                                         <select class="form-control">
@@ -503,8 +509,11 @@
                                         </select>
                                       </div>
                                   </div>
+                                  <div class="font-style clearfix pull-left MarginLeft15">
+                                      <h4 style="font-family: 'Lobster', cursive;">Default Text</h4>
+                                  </div>
                                   <div class="form-group MarginTop20 col-md-12">
-                                      <label class="control-label col-md-4">Recommended Fonts :</label>
+                                      <label class="control-label col-md-4 MarginTop10">Recommended Fonts :</label>
                                       <div class="col-md-6">
                                         <select class="form-control">
                                           <option value="" style="font-family: 'Lobster', cursive; font-size:16px;">Lobster</option>
@@ -514,11 +523,11 @@
                                         </select>
                                       </div>
                                   </div>
-                                  <div class="font-style clearfix pull-left">
-                                      <h4 style="font-family: 'Niramit', sans-serif;">Default Text</h4>
-                                      <h4 style="font-family: 'Indie Flower', cursive;">Default Text</h4>
-                                      <h4 style="font-family: 'Ubuntu', sans-serif;">Default Text</h4>
-                                      <h4 style="font-family: 'Quicksand', sans-serif;">Default Text</h4>
+                                  <div class="font-style clearfix pull-left MarginLeft15">
+                                      <h4 style="font-family: 'Niramit', sans-serif;">Recommended Text</h4>
+                                      <h4 style="font-family: 'Indie Flower', cursive;">Recommended Text</h4>
+                                      <h4 style="font-family: 'Ubuntu', sans-serif;">Recommended Text</h4>
+                                      <h4 style="font-family: 'Quicksand', sans-serif;">Recommended Text</h4>
                                   </div>
                                 </div>
                                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
@@ -530,7 +539,7 @@
                             		<div id="tab2" class="tab-slider--body clearfix">
                                   <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                                   <div class="form-group MarginTop20 col-md-12">
-                                      <label class="control-label col-md-4 MarginTop20">Default Color :</label>
+                                      <label class="control-label col-md-4 MarginTop10">Default Color :</label>
                                       <div class="col-md-6 color-style">
                                         <!-- <div><input type="text" class="form-control" style=" background-color:#c50876;" disabled/></div> -->
                                         <select class="form-control bg-change">
@@ -541,8 +550,11 @@
                                         </select>
                                       </div>
                                   </div>
+                                  <div class="color-style clearfix pull-left MarginLeft15">
+                                      <div><span style="background-color:#c1ac5c;"></span></div>
+                                  </div>
                                   <div class="form-group MarginTop20 col-md-12">
-                                      <label class="control-label col-md-4">Recommended Colors :</label>
+                                      <label class="control-label col-md-4 MarginTop10">Recommended Colors :</label>
                                       <div class="col-md-6">
                                         <select class="form-control bg-change">
                                           <option value="" style="background-color:#0c1a22; padding:6px 30px; margin-bottom:10px; border-bottom:1px solid #c9c9c9;"></option>
@@ -552,7 +564,7 @@
                                         </select>
                                       </div>
                                   </div>
-                                  <div class="color-style clearfix pull-left">
+                                  <div class="color-style clearfix pull-left MarginLeft15">
                                       <div><span style="background-color:#c1ac5c;"></span></div>
                                       <div><span style="background-color:#005b9e;"></span></div>
                                       <div><span style="background-color:#92278f;"></span></div>
@@ -566,6 +578,7 @@
                                 </div>
                             	</div>
                               <div class="col-md-12">
+                                <p><strong>Note for Developers:</strong> Include colors as small boxes like in the Microsoft Word</p>
                                 <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
                                 <button class="btn btn-primary prevBtn btn-lg pull-right" type="button">Previous</button>
                               </div>
@@ -574,155 +587,369 @@
                         </div>
                           <div class="row setup-content" id="step-4">
                             <div class="col-md-12">
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 MarginTop50">
+                            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 MarginTop50">
                               <div class="table-responsive">
-                                <table class="table table-striped table MarginTop20 table-bordered FilterResults Sizes" style="width:70%;">
+                                <table class="table table-striped table MarginTop20 table-bordered FilterResults Sizes">
                                     <thead>
                                         <tr>
-                                            <th style="width:100px;">Size</th>
-                                            <th style="width:100px;">List Price ($)</th>
-                                            <th style="width:100px;">Sale Price ($)</th>
-                                            <th style="width:100px;">Min Sell</th>
+                                            <th style="width:60px;">
+                                              <div class="checkbox checkbox-primary">
+                                                  <input id="checkbox" type="checkbox">
+                                                  <label for="checkbox"></label>
+                                              </div>
+                                            </th>
+                                            <th style="width:70px;">Size</th>
+                                            <th style="width:80px;">List Price ($)</th>
+                                            <th style="width:90px;">Sale Price ($)</th>
+                                            <th style="width:70px;">Min Sell</th>
+                                            <th style="width:150px;">Start Date</th>
+                                            <th style="width:150px;">End Date</th>
+                                            <th style="width:90px;">Default Size</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>
                                                 <div class="checkbox checkbox-primary">
-                                                    <input id="checkbox" type="checkbox">
-                                                    <label for="checkbox">11 X 11</label>
+                                                    <input id="checkbox1" type="checkbox">
+                                                    <label for="checkbox1"></label>
                                                 </div>
                                             </td>
-                                            <td>$8.25</td>
+                                            <td>11 X 11</td>
+                                            <td><input type="text" class="form-control" value="$8.25"/></td>
                                             <td><input type="text" class="form-control"/></td>
                                             <td><input type="text" class="form-control" value="2"/></td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="radio radio-primary">
+                                                  <input type="radio" name="radio" id="radio" value="option3">
+                                                  <label for="radio"></label>
+                                              </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <div class="checkbox checkbox-primary">
-                                                    <input id="checkbox" type="checkbox">
-                                                    <label for="checkbox">11 X 36</label>
+                                                    <input id="checkbox2" type="checkbox">
+                                                    <label for="checkbox2"></label>
                                                 </div>
                                             </td>
-                                            <td>$16.50</td>
+                                            <td>11 X 36</td>
+                                            <td><input type="text" class="form-control" value="$16.50"/></td>
                                             <td><input type="text" class="form-control"/></td>
                                             <td><input type="text" class="form-control" value="1"/></td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="radio radio-primary">
+                                                  <input type="radio" name="radio" id="radio1" value="option3">
+                                                  <label for="radio1"></label>
+                                              </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <div class="checkbox checkbox-primary">
-                                                    <input id="checkbox" type="checkbox">
-                                                    <label for="checkbox">14 X 14</label>
+                                                    <input id="checkbox8" type="checkbox">
+                                                    <label for="checkbox8"></label>
                                                 </div>
                                             </td>
-                                            <td>$12.50</td>
+                                            <td>36 X 11</td>
+                                            <td><input type="text" class="form-control" value="$16.50"/></td>
                                             <td><input type="text" class="form-control"/></td>
                                             <td><input type="text" class="form-control" value="2"/></td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="radio radio-primary">
+                                                  <input type="radio" name="radio" id="radio7" value="option3">
+                                                  <label for="radio7"></label>
+                                              </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <div class="checkbox checkbox-primary">
-                                                    <input id="checkbox" type="checkbox">
-                                                    <label for="checkbox">14 X 24</label>
+                                                    <input id="checkbox3" type="checkbox">
+                                                    <label for="checkbox3"></label>
                                                 </div>
                                             </td>
-                                            <td>$16.00</td>
+                                            <td>14 X 14</td>
+                                            <td><input type="text" class="form-control" value="$12.50"/></td>
+                                            <td><input type="text" class="form-control"/></td>
+                                            <td><input type="text" class="form-control" value="2"/></td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="radio radio-primary">
+                                                  <input type="radio" name="radio" id="radio2" value="option3">
+                                                  <label for="radio2"></label>
+                                              </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox checkbox-primary">
+                                                    <input id="checkbox4" type="checkbox">
+                                                    <label for="checkbox4"></label>
+                                                </div>
+                                            </td>
+                                            <td>14 X 24</td>
+                                            <td><input type="text" class="form-control" value="$16.00"/></td>
                                             <td><input type="text" class="form-control" value="$14.50"/></td>
                                             <td><input type="text" class="form-control" value="2"/></td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="radio radio-primary">
+                                                  <input type="radio" name="radio" id="radio3" value="option3">
+                                                  <label for="radio3"></label>
+                                              </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <div class="checkbox checkbox-primary">
-                                                    <input id="checkbox" type="checkbox">
-                                                    <label for="checkbox">17 X 24</label>
+                                                    <input id="checkbox9" type="checkbox">
+                                                    <label for="checkbox9"></label>
                                                 </div>
                                             </td>
-                                            <td>#18.00</td>
-                                            <td><input type="text" class="form-control"/></td>
-                                            <td><input type="text" class="form-control" value="1"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="checkbox checkbox-primary">
-                                                    <input id="checkbox" type="checkbox">
-                                                    <label for="checkbox">24 X 24</label>
-                                                </div>
-                                            </td>
-                                            <td>$27.50</td>
-                                            <td><input type="text" class="form-control"/></td>
-                                            <td><input type="text" class="form-control" value="1"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="checkbox checkbox-primary">
-                                                    <input id="checkbox" type="checkbox">
-                                                    <label for="checkbox">24 X 36</label>
-                                                </div>
-                                            </td>
-                                            <td>$40.00</td>
-                                            <td><input type="text" class="form-control" value="$32.00"/></td>
-                                            <td><input type="text" class="form-control" value="1"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="checkbox checkbox-primary">
-                                                    <input id="checkbox" type="checkbox">
-                                                    <label for="checkbox">36 X 11</label>
-                                                </div>
-                                            </td>
-                                            <td>$16.50</td>
+                                            <td>24 X 14</td>
+                                            <td><input type="text" class="form-control" value="$16.00"/></td>
                                             <td><input type="text" class="form-control"/></td>
                                             <td><input type="text" class="form-control" value="2"/></td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="radio radio-primary">
+                                                  <input type="radio" name="radio" id="radio8" value="option3">
+                                                  <label for="radio8"></label>
+                                              </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <div class="checkbox checkbox-primary">
-                                                    <input id="checkbox" type="checkbox">
-                                                    <label for="checkbox">24 X 14</label>
+                                                    <input id="checkbox5" type="checkbox">
+                                                    <label for="checkbox5"></label>
                                                 </div>
                                             </td>
-                                            <td>#16.00</td>
-                                            <td><input type="text" class="form-control"/></td>
-                                            <td><input type="text" class="form-control" value="2"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="checkbox checkbox-primary">
-                                                    <input id="checkbox" type="checkbox">
-                                                    <label for="checkbox">24 X 17</label>
-                                                </div>
-                                            </td>
-                                            <td>$18.00</td>
-                                            <td><input type="text" class="form-control"/></td>
-                                            <td><input type="text" class="form-control" value="2"/></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="checkbox checkbox-primary">
-                                                    <input id="checkbox" type="checkbox">
-                                                    <label for="checkbox">36 X 24</label>
-                                                </div>
-                                            </td>
-                                            <td>$40.00</td>
+                                            <td>17 X 24</td>
+                                            <td><input type="text" class="form-control" value="$18.00"/></td>
                                             <td><input type="text" class="form-control"/></td>
                                             <td><input type="text" class="form-control" value="1"/></td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="radio radio-primary">
+                                                  <input type="radio" name="radio" id="radio4" value="option3">
+                                                  <label for="radio4"></label>
+                                              </div>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <div class="checkbox checkbox-primary">
-                                                    <input id="checkbox" type="checkbox">
-                                                    <label for="checkbox">24 X 4</label>
+                                                    <input id="checkbox10" type="checkbox">
+                                                    <label for="checkbox10"></label>
                                                 </div>
                                             </td>
-                                            <td>$7.50</td>
+                                            <td>24 X 17</td>
+                                            <td><input type="text" class="form-control" value="$18.00"/></td>
+                                            <td><input type="text" class="form-control"/></td>
+                                            <td><input type="text" class="form-control" value="2"/></td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="radio radio-primary">
+                                                  <input type="radio" name="radio" id="radio9" value="option3">
+                                                  <label for="radio9"></label>
+                                              </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox checkbox-primary">
+                                                    <input id="checkbox12" type="checkbox">
+                                                    <label for="checkbox12"></label>
+                                                </div>
+                                            </td>
+                                            <td>24 X 4</td>
+                                            <td><input type="text" class="form-control" value="$7.50"/></td>
                                             <td><input type="text" class="form-control"/></td>
                                             <td><input type="text" class="form-control" value="3"/></td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="radio radio-primary">
+                                                  <input type="radio" name="radio" id="radio11" value="option3">
+                                                  <label for="radio11"></label>
+                                              </div>
+                                            </td>
                                         </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox checkbox-primary">
+                                                    <input id="checkbox6" type="checkbox">
+                                                    <label for="checkbox6"></label>
+                                                </div>
+                                            </td>
+                                            <td>24 X 24</td>
+                                            <td><input type="text" class="form-control" value="$27.50"/></td>
+                                            <td><input type="text" class="form-control"/></td>
+                                            <td><input type="text" class="form-control" value="1"/></td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="radio radio-primary">
+                                                  <input type="radio" name="radio" id="radio5" value="option3">
+                                                  <label for="radio5"></label>
+                                              </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox checkbox-primary">
+                                                    <input id="checkbox7" type="checkbox">
+                                                    <label for="checkbox7"></label>
+                                                </div>
+                                            </td>
+                                            <td>24 X 36</td>
+                                            <td><input type="text" class="form-control" value="$40.00"/></td>
+                                            <td><input type="text" class="form-control" value="$32.00"/></td>
+                                            <td><input type="text" class="form-control" value="1"/></td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="radio radio-primary">
+                                                  <input type="radio" name="radio" id="radio6" value="option3">
+                                                  <label for="radio6"></label>
+                                              </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="checkbox checkbox-primary">
+                                                    <input id="checkbox11" type="checkbox">
+                                                    <label for="checkbox11"></label>
+                                                </div>
+                                            </td>
+                                            <td>36 X 24</td>
+                                            <td><input type="text" class="form-control" value="$40.00"/></td>
+                                            <td><input type="text" class="form-control"/></td>
+                                            <td><input type="text" class="form-control" value="1"/></td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="input-group">
+                                                <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                              </div>
+                                            </td>
+                                            <td>
+                                              <div class="radio radio-primary">
+                                                  <input type="radio" name="radio" id="radio10" value="option3">
+                                                  <label for="radio10"></label>
+                                              </div>
+                                            </td>
+                                        </tr>
+
                                     </tbody>
                                 </table>
                               </div>
                             </div>
-                            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
                               <div class="imgpreview MarginTop150">
                                     <img src="images/57080.jpg" class="img-responsive"/>
                               </div>
@@ -749,18 +976,23 @@
                                         <div class="col-md-10 col-lg-10 col-sm-12 col-xs-12">
                                             <div class="thumbnail-img">
                                                   <img src="images/57080.jpg" class="img-thumbnail"/>
+                                                  <div class="overlay"><i class="fa fa-check"></i></div>
                                             </div>
                                             <div class="thumbnail-img">
                                                   <img src="images/57080.jpg" class="img-thumbnail"/>
+                                                  <div class="overlay"><i class="fa fa-check"></i></div>
                                             </div>
                                             <div class="thumbnail-img">
                                                   <img src="images/57080.jpg" class="img-thumbnail"/>
+                                                  <div class="overlay"><i class="fa fa-check"></i></div>
                                             </div>
                                             <div class="thumbnail-img">
                                                   <img src="images/57080.jpg" class="img-thumbnail"/>
+                                                  <div class="overlay"><i class="fa fa-check"></i></div>
                                             </div>
                                             <div class="thumbnail-img">
                                                   <img src="images/57080.jpg" class="img-thumbnail"/>
+                                                  <div class="overlay"><i class="fa fa-check"></i></div>
                                             </div>
                                         </div>
                                     </div>
@@ -846,6 +1078,7 @@
   <script type="text/javascript" src="js/jquery.multi-select.js"></script>
   <script type="text/javascript" src="js/jquery.validate.min.js"></script>
   <script type="text/javascript" src="js/jquery-editable-select.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
   <!-- Sweet-Alert  -->
   <script src="js/sweetalert.min.js"></script>
   <script src="js/jquery.sweet-alert.custom.js"></script>
@@ -910,7 +1143,14 @@
         $('#Existingitem').editableSelect({ effects: 'slide' });
         $('#defaultfont').editableSelect({ effects: 'slide' });
         $('#recommendedcolors').editableSelect({ effects: 'slide' });
-      })
+
+
+        $('.datepicker-autoclose').datepicker({
+            autoclose: true,
+            todayHighlight: true
+        });
+
+      });
   </script>
   <script type="text/javascript">
 $(document).ready(function(){

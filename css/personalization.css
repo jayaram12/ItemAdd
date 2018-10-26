@@ -29,6 +29,7 @@ input, textarea {height:32px !important;}
 .redbg {background-color:#fb6e52;}
 .MarginTop50 {margin-top:50px;}
 .MarginTop150 {margin-top:150px;}
+.MarginLeft15 {margin-left:15px;}
 /* Personalization CSS */
 .ItemPersonalization {padding:10px 10px 30px; border-radius:4px; background-color:#fff;}
 .stepwizard-step p {
@@ -140,7 +141,7 @@ input, textarea {height:32px !important;}
 }
 .wrap-custom-file label span {
   display: block;
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-size: 1.4rem;
   color: #777;
   -webkit-transition: color 0.4s;
@@ -180,6 +181,8 @@ input, textarea {height:32px !important;}
     background-position: center center;
     background-repeat: no-repeat; margin-bottom:0px;
   }
+
+  .wrap-custom-file i {position:absolute; top:5px; right:10px; color:#d80000;}
 
   .imgguidelines {    -webkit-padding-start: 20px; margin-bottom:40px;}
   .imgguidelines li {line-height:25px;}
@@ -266,11 +269,19 @@ input, textarea {height:32px !important;}
 .Sizes .checkbox label {padding-left:20px;}
 .imgpreview {overflow:hidden; padding:20px; border:1px solid #c9c9c9;}
 .setup-content {border:1px solid #c9c9c9; margin-top:50px; padding:0px 20px 20px; border-radius:4px;}
-#step-5 .thumbnail-img {float:left; margin-right:20px; width:100px;}
+#step-5 .thumbnail-img {float:left; margin-right:20px; width:100px; position:relative;}
 #step-5 .form-group {margin-bottom:10px; overflow:hidden;}
 #step-5 .font-style h4 {padding:5px; font-size:14px;}
 #step-5 .color-style div { width:54px; padding:6px; }
 #step-5 .color-style span { padding:1px 20px;}
+
+
+.thumbnail-img .overlay {position:absolute; background-color:rgba(255, 255, 255, 0.7); width:100%; height:100%; top:0;}
+.thumbnail-img .overlay i {position:absolute; top:9px; left:45px; color:#00ad00; font-size:17px;}
+
+
+
+
 
 @media only screen and (min-width : 1024px) {
   .stepwizard-step {
