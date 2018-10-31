@@ -279,8 +279,13 @@ input, textarea {height:32px !important;}
 .thumbnail-img .overlay {position:absolute; background-color:rgba(255, 255, 255, 0.7); width:100%; height:100%; top:0;}
 .thumbnail-img .overlay i {position:absolute; top:9px; left:45px; color:#00ad00; font-size:17px;}
 
-
-
+.Printed {overflow:hidden; padding-top:20px;}
+.Printed .checkbox-primary input[type=checkbox]:checked+label::before {  background-color: #4c5667;  border-color: #4c5667;}
+.Printed .checkbox label::before { border: 1px solid rgba(76, 86, 103,.6);height: 20px; width:20px; left: 0px; margin-left: -10px;}
+.Printed .checkbox{margin-top:5px; margin-bottom:0px;}
+.table>thead>tr>th {vertical-align:middle ;}
+.checkbox label::after {font-size: 12px; height: 17px; left: 0; margin-left: -8px; top: 1px;  width: 17px;}
+.Printed .checkbox label {padding-left:20px;}
 
 
 @media only screen and (min-width : 1024px) {
