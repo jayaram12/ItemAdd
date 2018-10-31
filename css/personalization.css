@@ -182,7 +182,7 @@ input, textarea {height:32px !important;}
     background-repeat: no-repeat; margin-bottom:0px;
   }
 
-  .wrap-custom-file i {position:absolute; top:5px; right:10px; color:#d80000;}
+  .wrap-custom-file i {position:absolute; top:5px; right:10px; color:#d80000; z-index:9;}
 
   .imgguidelines {    -webkit-padding-start: 20px; margin-bottom:40px;}
   .imgguidelines li {line-height:25px;}
