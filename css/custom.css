@@ -39,7 +39,7 @@ sup {color:red;}
 .navbar-top-links>li>a {line-height:100px; min-height:100px;}
 .open-close {margin-left:30px; margin-right:30px;}
 .app-search .form-control {margin-top:31px; width:500px; height:35px;}
- .app-search .form-control:focus {width:700px; height:35px;}
+ .app-search .form-control:focus {margin-top:31px; width:700px; height:35px;}
 .app-search a {top:38px;}
 .notify {margin-top:-50px;}
 
