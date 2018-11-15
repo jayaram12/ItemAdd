@@ -19,12 +19,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-extension.css" rel="stylesheet">
     <!-- Menu CSS -->
-    <link href="css/sidebar-nav.min.css" rel="stylesheet">
+
     <!-- Animation CSS -->
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/custom-select.css" rel="stylesheet" type="text/css" />
     <link href="css/bootstrap-select.min.css" rel="stylesheet" />
     <link href="css/multi-select.css" rel="stylesheet" type="text/css" />
+    <link href="css/sidebar-nav.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -316,13 +317,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <table class="table table-striped table MarginTop10 table-bordered">
                                             <thead>
                                                 <tr>
+                                                    <th>Item#</th>
                                                     <th>Collection&nbsp;Name</th>
-                                                    <th>Collection #</th>
-                                                    <th>Items&nbsp;Count</th>
+                                                    <th>Items&nbsp;Count&nbsp;/&nbsp;Soldout</th>
+                                                    <th>Piece&nbsp;Count</th>
                                                     <th width="150">Free&nbsp;Items&nbsp;Count</th>
                                                     <th>List&nbsp;$</th>
                                                     <th>Net&nbsp;$</th>
                                                     <th>Discount&nbsp;%</th>
+                                                    <th>Discount&nbsp;%&nbsp;with&nbsp;Free&nbsp;Item</th>
                                                     <th>Created On</th>
                                                     <th>User</th>
                                                     <th>Actions</th>
@@ -330,13 +333,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             </thead>
                                             <tbody>
                                                 <tr>
+                                                    <td>17539</td>
                                                     <td><span class="CellEdit">Bee</span></td>
-                                                    <td>26391</td>
-                                                    <td>260&nbsp;/&nbsp;<span class="text-danger">10</span></td>
-                                                    <td>14</td>
+                                                    <td>26&nbsp;/&nbsp;<span class="text-danger">10</span></td>
+                                                    <td>37</td>
+                                                    <td>4</td>
                                                     <td>$185</td>
                                                     <td>$158</td>
                                                     <td><span class="CellEdit">10%</span></td>
+                                                    <td><span class="CellEdit">12%</span></td>
                                                     <td>10/08/2018</td>
                                                     <td>Chi Yang</td>
                                                     <td>
@@ -345,13 +350,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td>15258</td>
                                                     <td><span class="CellEdit1">Cabin</span></td>
-                                                    <td>17648</td>
-                                                    <td>163&nbsp;/&nbsp;<span class="text-danger">4</span></td>
+                                                    <td>16&nbsp;/&nbsp;<span class="text-danger">4</span></td>
+                                                    <td>25</td>
                                                     <td>5</td>
                                                     <td>$93</td>
                                                     <td>$50</td>
                                                     <td><span class="CellEdit1">25%</span></td>
+                                                    <td><span class="CellEdit1">27%</span></td>
                                                     <td>09/17/2018</td>
                                                     <td>Chi Yang</td>
                                                     <td>
@@ -360,13 +367,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     </td>
                                                 </tr>
                                                 <tr>
+                                                    <td>13885</td>
                                                     <td><span class="CellEdit2">Resin Deer</span></td>
-                                                    <td>52820</td>
-                                                    <td>221&nbsp;/&nbsp;<span class="text-danger">9</span></td>
-                                                    <td>26</td>
-                                                    <td>$279</td>
-                                                    <td>$242</td>
+                                                    <td>22&nbsp;/&nbsp;<span class="text-danger">9</span></td>
+                                                    <td>31</td>
+                                                    <td>3</td>
+                                                    <td>$79</td>
+                                                    <td>$24</td>
                                                     <td><span class="CellEdit2">5%</span></td>
+                                                    <td><span class="CellEdit2">9%</span></td>
                                                     <td>09/12/2018</td>
                                                     <td>Chi Yang</td>
                                                     <td>
@@ -395,6 +404,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <div class="panel-wrapper collapse in">
                                  <div class="panel-body collectionitems">
                                    <a href="additemstocollection.html"><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c pull-left">Add New Items</button></a>
+                                   <a href="#" data-toggle="modal" data-target="#QuickAdd" class="model_img img-responsive"><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c pull-left" style="margin-left:20px;">Quick Add</button></a>
                                    <div class="pull-right">
                                      <form role="search" class="app-search pull-left">
                                          <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a>
@@ -408,8 +418,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <th>Image</th>
                                                     <th>Item #</th>
                                                     <th>Description</th>
+                                                    <th width="100">Quantity</th>
                                                     <th>List&nbsp;$</th>
-                                                    <th>Net&nbsp;$</th>
+                                                    <th width="100">Net&nbsp;$</th>
                                                     <th>Discount&nbsp;%</th>
                                                     <th>Min&nbsp;Sell</th>
                                                     <th>Min&nbsp;Pack</th>
@@ -423,27 +434,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <td><a class="preview" href="images/item_1.jpg"><img src="images/item_1.jpg" width="80" /></a></td>
                                                     <td>17002</td>
                                                     <td>Friendship Gift</td>
+                                                    <td><span class="CellEdit3">38</span></td>
                                                     <td>$26</td>
-                                                    <td><input type="text" class="form-control" value="$19" /></td>
+                                                    <td><span class="CellEdit3">$19</span</td>
                                                     <td>10%</td>
-                                                    <td>7</td>
-                                                    <td></td>
+                                                    <td>2</td>
+                                                    <td>1</td>
                                                     <td>157</td>
                                                     <td><span class="label label-rouded label-success text-center">Active</span></td>
-                                                    <td><a href="#" title="Delete" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle"><i class="fa fa-trash"></i> </button></a></td>
+                                                    <td>
+                                                      <a href="#" title="Edit" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle CellEditBtn3"><i class="fa fa-edit"></i> </button></a>
+                                                      <a href="#" title="Delete" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle"><i class="fa fa-trash"></i> </button></a></td>
                                                 </tr>
                                                 <tr>
                                                     <td><a class="preview" href="images/item_2.jpg"><img src="images/item_2.jpg" width="80" /></a></td>
                                                     <td>17967</td>
                                                     <td>Farm Sign</td>
+                                                    <td><span class="CellEdit4">152</span></td>
                                                     <td>$15</td>
-                                                    <td width="150"><input type="text" class="form-control" value="$6" /></td>
+                                                    <td width="150"><span class="CellEdit4">$6</span></td>
                                                     <td>10%</td>
                                                     <td>4</td>
-                                                    <td></td>
+                                                    <td>2</td>
                                                     <td>381</td>
                                                     <td><span class="label label-rouded label-warning text-center">Discontinued</span></td>
-                                                    <td><a href="#" title="Delete" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle"><i class="fa fa-trash"></i> </button></a></td>
+                                                    <td>
+                                                      <a href="#" title="Edit" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle CellEditBtn4"><i class="fa fa-edit"></i> </button></a>
+                                                      <a href="#" title="Delete" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle"><i class="fa fa-trash"></i> </button></a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -459,6 +476,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     </ul>
                                  </div>
                               </div>
+                              <div id="QuickAdd" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                          <h4>Please Select Item#</h4>
+                                          <div class="clearfix"></div>
+                                          <div class="form-group">
+                                            <label class="control-label col-md-4">Enter UPC&nbsp;/&nbsp;Item#: </label>
+                                            <div class="col-md-7">
+                                                <input type="text"class="form-control"/>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-12 text-center center-block MarginTop20">
+                                              <a href="#"><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c">Ok</button></a>
+                                              <a href="#"><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c" data-dimiss="close">Cancel</button></a>
+                                          </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
                           </div>
 
                           <!-- <div class="panel panel-inverse" style="margin-top:100px;">
@@ -530,6 +570,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <footer class="footer text-center"> 2018 &copy; All rights reserved. YIS 6.0 </footer>
         </div>
         <!-- /#page-wrapper -->
+
     </div>
     <!-- /#wrapper -->
     <script src="js/jquery.min.js"></script>

@@ -110,8 +110,72 @@ sup {color:red;}
 .tabs-style-flip nav li.tab-current a {background-color:#f5f5f5;}
 
 
+/* .overlay {
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ background: rgba(0, 0, 0, 0.8);
+ transition: opacity 500ms;
+ visibility: hidden;
+ opacity: 0; z-index:99999;
+}
+.overlay:target {
+ visibility: visible;
+ opacity: 1;
+}
+
+.popup {
+ margin: 120px auto;
+ padding: 20px;
+ background: #fff;
+ border-radius: 5px;
+ width: 30%;
+ position: relative;
+ transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+ margin-top: 0;
+ color: #333;
+ font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+ position: absolute;
+ top: 5px;
+ right: 10px;
+ transition: all 200ms;
+ font-size: 30px;
+ font-weight: bold;
+ text-decoration: none;
+ color: #333; opacity:1;
+}
+.popup .close:hover {
+ color: #4c5667;
+}
+.popup .content {
+ max-height: 30%;
+ overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+
+ .popup{
+ width: 70%;
+ }
+} */
 
 
+#QuickAdd .form-group{overflow:hidden; margin-bottom:0;}
+#QuickAdd .form-group label{margin-top:5px;}
+
+#QuickAdd .close {opacity:1; color:#4c5667;}
+#QuickAdd .close:hover {opacity:0.7;}
+#QuickAdd .close:focus {outline:0;}
+#QuickAdd h4 {margin-bottom:20px; font-weight:500; font-size:16px;}
+#QuickAdd .modal-dialog {margin:300px auto;}
+#QuickAdd .modal-content {border-radius:4px;}
 
 /* Media Screens */
 

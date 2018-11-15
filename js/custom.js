@@ -36,6 +36,13 @@ $('.CellEditBtn2').click(function(){
     $('.CellEdit2').attr('contenteditable', 'true');
 });
 
+$('.CellEditBtn3').click(function(){
+    $('.CellEdit3').attr('contenteditable', 'true');
+});
+
+$('.CellEditBtn4').click(function(){
+    $('.CellEdit4').attr('contenteditable', 'true');
+});
 
 });
 
