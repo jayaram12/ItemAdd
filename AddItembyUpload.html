@@ -40,6 +40,13 @@
 <style>
     .excel-btn {padding:10px 60px;}
     .MarginBottom20 {margin-bottom:20px;}
+    .checkbox-primary input[type=checkbox]:checked+label::before {  background-color: #4c5667;  border-color: #4c5667;}
+    .checkbox label::before { border: 1px solid rgba(76, 86, 103,.6);height: 20px; width:20px; left: 0px; margin-left: -10px;}
+    .checkbox label { padding-left:20px;}
+    .checkbox{margin-top:5px; margin-bottom:0px;}
+    .table>thead>tr>th {vertical-align:middle ;}
+    .checkbox label::after {font-size: 12px; height: 17px; left: 0; margin-left: -8px; top: 1px;  width: 17px;}
+    .noofimages {width:50px; float:left; margin-bottom:5px; margin-right:5px;}
 </style>
 </head>
 <body>
@@ -292,78 +299,109 @@
                       <div class="white-box">
                           <div class="AddItembyUpload clearfix">
                               <div class="col-md-12 MarginBottom20  nopaddingleft nopaddingright">
-                                    <button type="button" class="fcbtn btn btn-outline btn-primary btn-1c excel-btn">Import Excel Sheet</button>
+                                    <button type="button" class="fcbtn btn btn-outline btn-primary btn-1c">Import Excel Sheet</button>
                               </div>
                               <div class="ExcelUploadResults">
                                 <div class="table-responsive">
                                     <table class="table table-striped table MarginTop10 table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>Item#</th>
-                                                <th>Collection&nbsp;Name</th>
-                                                <th>Items&nbsp;Count&nbsp;/&nbsp;Sold Out</th>
-                                                <th>Piece&nbsp;Count</th>
-                                                <th width="150">Free&nbsp;Items&nbsp;Count</th>
-                                                <th>List&nbsp;$</th>
-                                                <th>Net&nbsp;$</th>
-                                                <th>Discount&nbsp;%</th>
-                                                <th>Discount&nbsp;%&nbsp;with&nbsp;Free&nbsp;Item</th>
-                                                <th>Created On</th>
-                                                <th>User</th>
-                                                <th>Actions</th>
+                                              <th style="width:50px;">
+                                                <div class="checkbox checkbox-primary">
+                                                    <input id="checkbox" type="checkbox">
+                                                    <label for="checkbox"></label>
+                                                </div>
+                                              </th>
+                                                <th style="width:50px;">Item#</th>
+                                                <th style="width:80px;"># of Images</th>
+                                                <th style="width:50px;">Default&nbsp;Font</th>
+                                                <th style="width:300px;">Recommended&nbsp;Fonts</th>
+                                                <th style="width:50px;">Default&nbsp;Color</th>
+                                                <th style="width:80px;">Recommended&nbsp;Colors</th>
+                                                <th style="width:50px;">Min&nbsp;Sell</th>
+                                                <th style="width:80px;">List&nbsp;$</th>
+                                                <th style="width:50px;">Images</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
+                                              <td>
+                                                <div class="checkbox checkbox-primary">
+                                                    <input id="checkbox1" type="checkbox">
+                                                    <label for="checkbox1"></label>
+                                                </div>
+                                              </td>
                                                 <td>17539</td>
-                                                <td><span class="CellEdit">Bee</span></td>
-                                                <td>26&nbsp;/&nbsp;<span class="text-danger">10</span></td>
-                                                <td>37</td>
-                                                <td>4</td>
-                                                <td>$185</td>
-                                                <td>$158</td>
-                                                <td><span class="CellEdit">10%</span></td>
-                                                <td>12%</td>
-                                                <td>10/08/2018</td>
-                                                <td>Chi Yang</td>
-                                                <td>
-                                                    <a href="javascript:void(0)" title="Edit" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle CellEditBtn"><i class="fa fa-edit"></i> </button></a>
-                                                    <a href="javascript:void(0)" title="Delete" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle"><i class="fa fa-trash"></i> </button></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>15258</td>
-                                                <td><span class="CellEdit1">Cabin</span></td>
-                                                <td>16&nbsp;/&nbsp;<span class="text-danger">4</span></td>
-                                                <td>25</td>
-                                                <td>5</td>
-                                                <td>$93</td>
-                                                <td>$50</td>
-                                                <td><span class="CellEdit1">25%</span></td>
-                                                <td>27%</td>
-                                                <td>09/17/2018</td>
-                                                <td>Chi Yang</td>
-                                                <td>
-                                                    <a href="javascript:void(0)" title="Edit" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle CellEditBtn1"><i class="fa fa-edit"></i> </button></a>
-                                                    <a href="javascript:void(0)" title="Delete" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle"><i class="fa fa-trash"></i> </button></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>13885</td>
-                                                <td><span class="CellEdit2">Resin Deer</span></td>
-                                                <td>22&nbsp;/&nbsp;<span class="text-danger">9</span></td>
-                                                <td>31</td>
                                                 <td>3</td>
-                                                <td>$79</td>
-                                                <td>$24</td>
-                                                <td><span class="CellEdit2">5%</span></td>
-                                                <td>9%</td>
-                                                <td>09/12/2018</td>
-                                                <td>Chi Yang</td>
+                                                <td>OldStyle1</td>
+                                                <td></td>
+                                                <td>#ffffff</td>
+                                                <td>#8c1c2e, #c9972e, #000000</td>
+                                                <td>2</td>
+                                                <td>$21</td>
                                                 <td>
-                                                    <a href="javascript:void(0)" title="Edit" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle CellEditBtn2"><i class="fa fa-edit"></i> </button></a>
-                                                    <a href="javascript:void(0)" title="Delete" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle"><i class="fa fa-trash"></i> </button></a>
+                                                    <div class="noofimages">
+                                                        <img src="images/57080.jpg" class="img-responsive"/>
+                                                    </div>
+                                                    <div class="noofimages">
+                                                        <img src="images/57080.jpg" class="img-responsive"/>
+                                                    </div>
+                                                    <div class="noofimages">
+                                                        <img src="images/57080.jpg" class="img-responsive"/>
+                                                    </div>
                                                 </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <div class="checkbox checkbox-primary">
+                                                    <input id="checkbox2" type="checkbox">
+                                                    <label for="checkbox2"></label>
+                                                </div>
+                                              </td>
+                                            </td>
+                                              <td>15258</td>
+                                              <td>3</td>
+                                              <td>Aleandra</td>
+                                              <td></td>
+                                              <td>#5a5754</td>
+                                              <td>#bc4339</td>
+                                              <td>1</td>
+                                              <td>$17</td>
+                                              <td>
+                                                  <div class="noofimages">
+                                                      <img src="images/item_1.jpg" class="img-responsive"/>
+                                                  </div>
+                                                  <div class="noofimages">
+                                                      <img src="images/item_1.jpg" class="img-responsive"/>
+                                                  </div>
+                                                  <div class="noofimages">
+                                                      <img src="images/item_1.jpg" class="img-responsive"/>
+                                                  </div>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td>
+                                                <div class="checkbox checkbox-primary">
+                                                    <input id="checkbox3" type="checkbox">
+                                                    <label for="checkbox3"></label>
+                                                </div>
+                                              </td>
+                                              <td>13885</td>
+                                              <td>2</td>
+                                              <td>Glorydays</td>
+                                              <td>Rockwell Extra Bold , Rockwell , Pratiwi Sans Typeface, LucidaFax</td>
+                                              <td>#2e1d11</td>
+                                              <td>#a15128</td>
+                                              <td>1</td>
+                                              <td>$17</td>
+                                              <td>
+                                                  <div class="noofimages">
+                                                      <img src="images/57080.jpg" class="img-responsive"/>
+                                                  </div>
+                                                  <div class="noofimages">
+                                                      <img src="images/57080.jpg" class="img-responsive"/>
+                                                  </div>
+                                              </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -377,6 +415,9 @@
                                     <li> <a href="#">5</a> </li>
                                     <li> <a href="#"><i class="fa fa-angle-right"></i></a> </li>
                                 </ul>
+                                <div class="col-md-12 text-center center-block">
+                                    <button type="button" class="fcbtn btn btn-outline btn-primary btn-1c">Make All Item Active</button>
+                                </div>
                               </div>
                           </div>
                       </div>
