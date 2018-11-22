@@ -32,7 +32,8 @@ sup {color:red;}
 .nopaddingleft {padding-left:0;}
 .nopaddingright {padding-right:0;}
 [contenteditable="true"] {border:1px solid #e4e7ea !important; outline:none; width:85%; padding:3px 5px; display:block;}
-
+.text-primary {color:#4f5467 !important;}
+a.text-primary:focus, a.text-primary:hover {color:#4f5467 !important;}
 
 /* Header CSS */
 .top-left-part {width:100px; overflow:hidden;}
@@ -176,6 +177,29 @@ sup {color:red;}
 #QuickAdd h4 {margin-bottom:20px; font-weight:500; font-size:16px;}
 #QuickAdd .modal-dialog {margin:300px auto;}
 #QuickAdd .modal-content {border-radius:4px;}
+
+
+/* Login and Register Page CSS */
+.login-register {background-color:#4f5467 !important;}
+.white-box .box-title {font-size:24px; text-align:center; color:#4f5467;}
+hr.custom {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #f0f0f0, #4f5467, #f0f0f0);
+  background-image: -moz-linear-gradient(left, #f0f0f0, #4f5467, #f0f0f0);
+  background-image: -ms-linear-gradient(left, #f0f0f0, #4f5467, #f0f0f0);
+  background-image: -o-linear-gradient(left, #f0f0f0, #4f5467, #f0f0f0);
+}
+
+#loginform .form-group {margin-bottom:15px !important; overflow:hidden;}
+#loginform .form-group .checkbox {margin-top:0px;}
+#loginform .form-group button {padding:5px 60px;}
+
+#loginform .checkbox-primary {float:left;}
+#loginform .checkbox-primary input[type=checkbox]:checked+label::before {  background-color: #4c5667;  border-color: #4c5667;}
+#loginform .checkbox label::before { border: 1px solid rgba(76, 86, 103,.6);height: 20px; width:20px; left: 0px;}
+#loginform .checkbox{margin-top:5px; margin-bottom:0px; padding-left:12px;}
+#loginform .checkbox label::after {font-size: 12px; height: 17px; left: -10px; margin-left: -8px; top: 1px;  width: 17px;}
 
 /* Media Screens */
 
