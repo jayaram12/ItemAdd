@@ -45,6 +45,63 @@ scratch. This page gets rid of all links and provides the needed markup only.
 .checkbox label::after {font-size: 12px; height: 17px; left: 0; margin-left: -8px; top: 1px;  width: 17px;}
 .quickaddimg {width:50px;}
 .form-group p {margin-bottom:0; margin-top:8px;}
+#QuickAdd .modal-header h3{font-size:18px; float:left; font-weight:500;}
+.onoffswitch {
+    position: relative; width: 80px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 1px solid #4c5667; border-radius: 4px; font-size:13px;
+}
+
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+    content: "Active";
+    padding-left: 10px;
+    background-color: rgba(76, 86, 103, 0.8); color: #FFFFFF; font-size:13px;
+}
+
+.onoffswitch-inner:after {
+    content: "Inactive";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #4c5667; font-size:13px;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    border: 2px solid #999999; border-radius: 4px;
+    position: absolute; top: 0; bottom: 0; right: 56px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
 </style>
 </head>
 
@@ -342,6 +399,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <th>Discount&nbsp;%&nbsp;with&nbsp;Free&nbsp;Item</th>
                                                     <th>Created On</th>
                                                     <th>Created By</th>
+                                                    <th>Make Active/Inactive</th>
                                                     <th>Actions</th>
                                                 </tr>
                                             </thead>
@@ -358,6 +416,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <td>12%</td>
                                                     <td>10/08/2018</td>
                                                     <td>Chi Yang</td>
+                                                    <td>
+                                                      <div class="onoffswitch">
+                                                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                                                          <label class="onoffswitch-label" for="myonoffswitch">
+                                                              <span class="onoffswitch-inner"></span>
+                                                          </label>
+                                                      </div>
+                                                    </td>
                                                     <td>
                                                         <a href="javascript:void(0)" title="Edit" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle CellEditBtn"><i class="fa fa-edit"></i> </button></a>
                                                         <a href="javascript:void(0)" title="Delete" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle"><i class="fa fa-trash"></i> </button></a>
@@ -376,6 +442,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <td>09/17/2018</td>
                                                     <td>Chi Yang</td>
                                                     <td>
+                                                      <div class="onoffswitch">
+                                                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch1" checked>
+                                                          <label class="onoffswitch-label" for="myonoffswitch1">
+                                                              <span class="onoffswitch-inner"></span>
+                                                          </label>
+                                                      </div>
+                                                    </td>
+                                                    <td>
                                                         <a href="javascript:void(0)" title="Edit" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle CellEditBtn1"><i class="fa fa-edit"></i> </button></a>
                                                         <a href="javascript:void(0)" title="Delete" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle"><i class="fa fa-trash"></i> </button></a>
                                                     </td>
@@ -392,6 +466,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <td>9%</td>
                                                     <td>09/12/2018</td>
                                                     <td>Chi Yang</td>
+                                                    <td>
+                                                      <div class="onoffswitch">
+                                                          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2" checked>
+                                                          <label class="onoffswitch-label" for="myonoffswitch2">
+                                                              <span class="onoffswitch-inner"></span>
+                                                          </label>
+                                                      </div>
+                                                    </td>
                                                     <td>
                                                         <a href="javascript:void(0)" title="Edit" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle CellEditBtn2"><i class="fa fa-edit"></i> </button></a>
                                                         <a href="javascript:void(0)" title="Delete" data-toggle="tooltip"><button type="button" class="btn btn-custom btn-circle"><i class="fa fa-trash"></i> </button></a>
@@ -418,7 +500,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <div class="panel-wrapper collapse in">
                                  <div class="panel-body collectionitems">
                                    <a href="additemstocollection.html"><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c pull-left">Add New Items</button></a>
-                                   <a href="javascript:void(0)" data-toggle="modal" data-target="#QuickAdd" class="model_img img-responsive"><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c pull-left" style="margin-left:20px;">Quick Add</button></a>
+                                   <a href="javascript:void(0)" data-toggle="modal" data-target="#QuickAdd" class="model_img img-responsive"><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c pull-left" id="QuickAddBtn" style="margin-left:20px;">Quick Add</button></a>
                                    <div class="pull-right">
                                      <form role="search" class="app-search pull-left">
                                          <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a>
@@ -493,19 +575,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                               <div id="QuickAdd" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <div class="modal-body">
-                                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                          <h4>Enter UPC&nbsp;/&nbsp;Item#</h4>
-                                          <div class="clearfix"></div>
-                                          <div class="form-group col-md-12">
-                                                <input type="text"class="form-control"/>
-                                          </div>
-                                          <div class="form-group col-md-12">
+                                        <div class="modal-header">
+                                            <h3>Quick Add for Bee Collection</h3>
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        </div>
+                                        <div class="modal-body clearfix">
+                                          <div class="form-group col-md-12 nopaddingleft nopaddingright">
                                             <div class="checkbox checkbox-primary">
-                                                <input id="checkbox" type="checkbox">
-                                                <label for="checkbox">Auto Add</label>
+                                                <input id="AutoAdd" type="checkbox" checked>
+                                                <label for="AutoAdd">Auto Add</label>
                                             </div>
                                           </div>
+                                          <div class="form-group col-md-12">
+                                                <label class="col-form-label">Enter UPC&nbsp;/&nbsp;Item#: </label>
+                                                <input type="text"class="form-control"/>
+                                          </div>
+                                          <div id="AutoAddContent">
                                             <div class="form-group col-md-12 MarginTop20 nopaddingleft nopaddingright">
                                                 <label for="example-text-input" class="col-form-label col-md-4">Image :</label>
                                                 <div class="col-md-6">
@@ -532,6 +617,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                   <p>$26</p>
                                                 </div>
                                             </div>
+                                          </div>
+
                                           <div class="form-group col-md-6 MarginTop10">
                                               <label class="control-label">Quantity</label>
                                               <input type="text" class="form-control" value="16"/>
@@ -542,7 +629,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                           </div>
                                           <div class="col-md-12 text-center center-block MarginTop20">
                                               <a href=""><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c">Ok</button></a>
-                                              <a href=""><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c" data-dismiss="close">Cancel</button></a>
+                                              <a href=""><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c" data-dismiss="modal">Cancel</button></a>
                                           </div>
                                         </div>
                                     </div>
@@ -636,6 +723,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script type="text/javascript" src="js/jquery.multi-select.js"></script>
     <script src="js/custom.min.js"></script>
     <script src="js/custom.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('#AutoAddContent').hide();
+          $('#AutoAdd').change(function(){
+              if(this.checked)
+                  $('#AutoAddContent').hide();
+              else
+                  $('#AutoAddContent').show();
+
+          });
+      });
+    </script>
 </body>
 
 </html>
