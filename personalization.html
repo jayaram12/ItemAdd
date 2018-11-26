@@ -37,6 +37,10 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<style>
+    .itemmanual .input-group-addon {height:auto; padding:5px 10px; background-color:#4c5667; color:#fff; margin-left:10px;}
+    .NewItem button {padding:5px 10px; font-size:12px;}
+</style>
 </head>
 <body>
   <!-- Preloader -->
@@ -329,9 +333,15 @@
                                                           <label for="activeitem"> Existing Item </label>
                                                       </div>
                                                   </div>
+                                                  <div class="col-md-3 col-lg-2 col-sm-4 col-xs-12">
+                                                      <div class="radio radio-theme">
+                                                          <input type="radio" name="radio" value="ManualItem" id="manualitem">
+                                                          <label for="manualitem"> Add Item Manually </label>
+                                                      </div>
+                                                  </div>
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <div class="box NewItem">
+                                                    <div class="box NewItem MarginTop20">
                                                           <div class="col-md-5 col-lg-4 col-sm-6 col-xs-12 MarginTop20">
                                                             <div class="form-group col-md-12">
                                                               <label class="control-label col-md-5">Select Item#: </label>
@@ -355,16 +365,18 @@
                                                     </div>
                                                     <div class="box ActiveItem">
                                                         <div class="ActiveItemContent MarginTop20">
-                                                          <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12 MarginTop20">
-                                                            <label class="control-label">Select Item#: </label>
-                                                            <select id="Existingitem" class="form-control">
-                                                            	<option value="">57134</option>
-                                                            	<option value="">57290</option>
-                                                            	<option value="">57921</option>
-                                                            	<option value="">57236</option>
-                                                            </select>
+                                                          <div class="col-md-5 col-lg-4 col-sm-6 col-xs-12 MarginTop20">
+                                                            <label class="control-label col-md-5">Select Item#: </label>
+                                                            <div class="col-md-7">
+                                                                <select id="Existingitem" class="form-control">
+                                                                	<option value="">57134</option>
+                                                                	<option value="">57290</option>
+                                                                	<option value="">57921</option>
+                                                                	<option value="">57236</option>
+                                                                </select>
+                                                            </div>
                                                           </div>
-                                                          <div class="col-md-6 offset-md-2 offset-lg-3 col-lg-6 col-sm-6 col-xs-12">
+                                                          <div class="col-md-6 offset-md-1 offset-lg-2 col-lg-6 col-sm-6 col-xs-12">
                                                             <div class="ImagePreview">
                                                                 <i class="fa fa-times"></i>
                                                             </div>
@@ -377,9 +389,26 @@
                                                         </div>
                                                         </div>
                                                     </div>
+                                                    <div class="box ManualItem MarginTop20">
+                                                          <div class="col-md-5 col-lg-4 col-sm-6 col-xs-12 MarginTop20">
+                                                            <div class="form-group col-md-12">
+                                                              <label class="control-label col-md-5">Enter Item#: </label>
+                                                              <div class="col-md-7">
+                                                                <input type="text" class="form-control"/>
+                                                            </div>
+                                                            </div>
+                                                            </div>
+                                                            <div class="col-md-6 offset-md-1 col-lg-6 offset-lg-2 col-sm-6 col-xs-12">
+                                                                <div class="imgpreview">
+                                                                      <img src="images/57080.jpg" class="img-responsive"/>
+                                                                </div>
+
+                                                            </div>
+                                                          </div>
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-12 MarginTop20">
-                                                    <button class="btn btn-primary pull-right nextBtn btn-lg" type="button">Next</button>
+                                                    <button class="fcbtn btn btn-outline btn-primary btn-1c pull-right nextBtn" type="button">Next</button>
                                                 </div>
 
                           </div>
@@ -1187,6 +1216,7 @@
   <script type="text/javascript">
 $(document).ready(function(){
   $('.ActiveItem').hide();
+  $('.ManualItem').hide();
     $('input[type="radio"]').click(function(){
         var inputValue = $(this).attr("value");
         var targetBox = $("." + inputValue);
