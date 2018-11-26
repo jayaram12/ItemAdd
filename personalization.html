@@ -38,8 +38,10 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 <style>
-    .itemmanual .input-group-addon {height:auto; padding:5px 10px; background-color:#4c5667; color:#fff; margin-left:10px;}
+    .itemmanual .input-group-addon {background-color:transparent; margin-left:10px; padding:0;}
     .NewItem button {padding:5px 10px; font-size:12px;}
+    .AddManualItem {background-color:#4c5667; padding:7px 10px; color:#fff;}
+    .AddManualItem:hover, .AddManualItem:focus, .AddManualItem:active {color:#fff;}
 </style>
 </head>
 <body>
@@ -394,7 +396,13 @@
                                                             <div class="form-group col-md-12">
                                                               <label class="control-label col-md-5">Enter Item#: </label>
                                                               <div class="col-md-7">
-                                                                <input type="text" class="form-control"/>
+                                                                <div class="input-group itemmanual">
+                                                                    <input type="text" class="form-control"/>
+                                                                    <div class="input-group-addon">
+                                                                        <a href="#" class="AddManualItem" type="button">Add</a>
+                                                                    </div>
+                                                                </div>
+
                                                             </div>
                                                             </div>
                                                             </div>
