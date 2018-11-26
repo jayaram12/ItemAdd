@@ -45,7 +45,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 .checkbox label::after {font-size: 12px; height: 17px; left: 0; margin-left: -8px; top: 1px;  width: 17px;}
 .quickaddimg {width:50px;}
 .form-group p {margin-bottom:0; margin-top:8px;}
-#QuickAdd .modal-header h3{font-size:18px; float:left; font-weight:500;}
+#QuickAdd .modal-header h3{font-size:18px; float:left; font-weight:500; margin-top:0; margin-bottom:0;}
+#QuickAdd .modal-header {border-bottom:none; padding:20px 15px 0px;}
+hr {background-color:#4c6657; height:1px; margin-top:12px; margin-bottom:0;}
 .onoffswitch {
     position: relative; width: 80px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
@@ -578,6 +580,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <div class="modal-header">
                                             <h3>Quick Add for Bee Collection</h3>
                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <hr class="clearfix col-md-12 nopaddingleft nopaddingright"/>
                                         </div>
                                         <div class="modal-body clearfix">
                                           <div class="form-group col-md-12 nopaddingleft nopaddingright">
@@ -590,7 +593,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <label class="col-form-label">Enter UPC&nbsp;/&nbsp;Item#: </label>
                                                 <input type="text"class="form-control"/>
                                           </div>
-                                          <div id="AutoAddContent">
+
                                             <div class="form-group col-md-12 MarginTop20 nopaddingleft nopaddingright">
                                                 <label for="example-text-input" class="col-form-label col-md-4">Image :</label>
                                                 <div class="col-md-6">
@@ -617,8 +620,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                   <p>$26</p>
                                                 </div>
                                             </div>
-                                          </div>
 
+                                          <div id="AutoAddContent">
                                           <div class="form-group col-md-6 MarginTop10">
                                               <label class="control-label">Quantity</label>
                                               <input type="text" class="form-control" value="16"/>
@@ -626,6 +629,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                           <div class="form-group col-md-6 MarginTop10">
                                               <label class="control-label">Price</label>
                                               <input type="text" class="form-control" value="$38"/>
+                                          </div>
                                           </div>
                                           <div class="col-md-12 text-center center-block MarginTop20">
                                               <a href=""><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c">Ok</button></a>
