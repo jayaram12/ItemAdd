@@ -48,6 +48,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 #QuickAdd .modal-header h3{font-size:18px; float:left; font-weight:500; margin-top:0; margin-bottom:0;}
 #QuickAdd .modal-header {border-bottom:none; padding:20px 15px 0px;}
 hr {background-color:#4c5667; height:1px; margin-top:12px; margin-bottom:0;}
+#QuickAdd .modal-body h4 {margin-bottom:0; margin-top:20px; padding:4px 10px; background-color:#4c5667; color:#fff;}
 .onoffswitch {
     position: relative; width: 80px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
@@ -593,34 +594,6 @@ hr {background-color:#4c5667; height:1px; margin-top:12px; margin-bottom:0;}
                                                 <label class="col-form-label">Enter UPC&nbsp;/&nbsp;Item#: </label>
                                                 <input type="text"class="form-control"/>
                                           </div>
-
-                                            <div class="form-group col-md-12 MarginTop20 nopaddingleft nopaddingright">
-                                                <label for="example-text-input" class="col-form-label col-md-4">Image :</label>
-                                                <div class="col-md-6">
-                                                  <div class="quickaddimg">
-                                                      <img src="images/item_1.jpg" class="img-responsive"/>
-                                                  </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-md-12 nopaddingleft nopaddingright">
-                                                <label for="example-text-input" class="col-form-label col-md-4">Description :</label>
-                                                <div class="col-md-6">
-                                                  <p>Friendship gift</p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-md-12 nopaddingleft nopaddingright">
-                                                <label for="example-text-input" class="col-form-label col-md-4">Min Sell :</label>
-                                                <div class="col-md-6">
-                                                  <p>6</p>
-                                                </div>
-                                            </div>
-                                            <div class="form-group col-md-12 nopaddingleft nopaddingright">
-                                                <label for="example-text-input" class="col-form-label col-md-4">List $ :</label>
-                                                <div class="col-md-6">
-                                                  <p>$26</p>
-                                                </div>
-                                            </div>
-
                                           <div id="AutoAddContent">
                                           <div class="form-group col-md-6 MarginTop10">
                                               <label class="control-label">Quantity</label>
@@ -631,9 +604,44 @@ hr {background-color:#4c5667; height:1px; margin-top:12px; margin-bottom:0;}
                                               <input type="text" class="form-control" value="$38"/>
                                           </div>
                                           </div>
+                                          <div class="col-md-12">
+                                              <h4>Last Added Item</h4>
+                                          </div>
+                                          <div class="form-group col-md-12 nopaddingleft nopaddingright">
+                                              <label for="example-text-input" class="col-form-label col-md-4">Item#:</label>
+                                              <div class="col-md-6">
+                                                  <p>57138</p>
+                                              </div>
+                                          </div>
+                                            <div class="form-group col-md-12 nopaddingleft nopaddingright">
+                                                <label for="example-text-input" class="col-form-label col-md-4">Image:</label>
+                                                <div class="col-md-6">
+                                                  <div class="quickaddimg">
+                                                      <img src="images/item_1.jpg" class="img-responsive"/>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-12 nopaddingleft nopaddingright">
+                                                <label for="example-text-input" class="col-form-label col-md-4">Description:</label>
+                                                <div class="col-md-6">
+                                                  <p>Friendship gift</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-12 nopaddingleft nopaddingright">
+                                                <label for="example-text-input" class="col-form-label col-md-4">Min Sell:</label>
+                                                <div class="col-md-6">
+                                                  <p>6</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-12 nopaddingleft nopaddingright">
+                                                <label for="example-text-input" class="col-form-label col-md-4">List $:</label>
+                                                <div class="col-md-6">
+                                                  <p>$26</p>
+                                                </div>
+                                            </div>
                                           <div class="col-md-12 text-center center-block MarginTop20">
                                               <a href=""><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c">Ok</button></a>
-                                              <a href=""><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c" data-dismiss="modal">Cancel</button></a>
+                                              <a href=""><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c Cancel" data-dismiss="modal">Cancel</button></a>
                                           </div>
                                         </div>
                                     </div>
@@ -730,12 +738,16 @@ hr {background-color:#4c5667; height:1px; margin-top:12px; margin-bottom:0;}
     <script type="text/javascript">
         $(document).ready(function(){
           $('#AutoAddContent').hide();
+          $('.Cancel').hide();
           $('#AutoAdd').change(function(){
-              if(this.checked)
+              if(this.checked) {
                   $('#AutoAddContent').hide();
-              else
+                  $('.Cancel').hide();
+                  }
+              else {
                   $('#AutoAddContent').show();
-
+                  $('.Cancel').show();
+                  }
           });
       });
     </script>
