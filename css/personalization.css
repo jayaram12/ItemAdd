@@ -194,7 +194,7 @@ input, textarea {height:32px !important;}
 .font-style i:hover {cursor:pointer;}
 
 #step-2 button, #step-3 button, #step-4 button, #step-5 button, #step-6 button {margin-right:20px;}
-#step-2 button:focus, #step-3 button:focus, #step-4 button:focus, #step-5 button:focus, #step-6 button:focus {color:#fff !important;}
+/* #step-2 button:focus, #step-3 button:focus, #step-4 button:focus, #step-5 button:focus, #step-6 button:focus {color:#fff !important;} */
 .recommended-fonts h4:hover {cursor:pointer;}
 .tab-slider--container {margin-top:50px;}
 
@@ -223,7 +223,7 @@ input, textarea {height:32px !important;}
 }
 .tab-slider--tabs:after {
   content: "";
-  width: 50%;
+  width: 34%;
   background: #4F5467;
   height: 100%;
   position: absolute;
@@ -233,7 +233,11 @@ input, textarea {height:32px !important;}
   border-radius: 2px;
 }
 .tab-slider--tabs.slide:after {
-  left: 50%;
+  left: 33%;
+}
+
+.tab-slider--tabs.slide2:after {
+  left: 67%;
 }
 
 .tab-slider--trigger {

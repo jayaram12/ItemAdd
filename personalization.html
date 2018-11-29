@@ -37,12 +37,12 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-<!-- <style>
-    .itemmanual .input-group-addon {background-color:transparent; margin-left:10px; padding:0;}
-    .NewItem button {padding:5px 10px; font-size:12px;}
-    .AddManualItem {background-color:#4c5667; padding:7px 10px; color:#fff;}
-    .AddManualItem:hover, .AddManualItem:focus, .AddManualItem:active {color:#fff;}
-</style> -->
+ <style>
+      .btn-trash {padding:5px 10px; background-color:#4c5667; color:#fff !important; border:none; text-align:center; font-size:14px;}
+      .Size10X10 a button {padding:6px 10px; font-size:13px; margin-right:0px !important;}
+      .Size10X10 a button:focus, .Size10X10 a button:active {color:#4c5667 !important;}
+      .Size10X10>div {padding:20px;}
+    </style>
 </head>
 <body>
   <!-- Preloader -->
@@ -527,12 +527,46 @@
                             <div class="col-md-12 MarginTop50">
                               <div class="tab-slider--nav">
                             		<ul class="tab-slider--tabs">
-                            			<li class="tab-slider--trigger active" rel="tab1">Select Font</li>
-                            			<li class="tab-slider--trigger" rel="tab2">Select Color</li>
+                            			<li class="tab-slider--trigger active" rel="tab1">Select Size</li>
+                            			<li class="tab-slider--trigger" rel="tab2">Select Font</li>
+                            			<li class="tab-slider--trigger" rel="tab3">Select Color</li>
                             		</ul>
                             	</div>
                             	<div class="tab-slider--container clearfix">
-                            		<div id="tab1" class="tab-slider--body clearfix">
+                                <div id="tab1" class="tab-slider--body clearfix">
+                                  <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                  <div class="form-group MarginTop20 col-md-12">
+                                      <label class="control-label col-md-4 MarginTop10">Default Size :</label>
+                                      <div class="col-md-6">
+                                        <input type="text" class="form-control" value="11 X 11"/>
+                                      </div>
+                                  </div>
+                                  <div class="font-style clearfix pull-left MarginLeft15">
+                                      <h4>11 X 11</h4>
+                                  </div>
+                                  <div class="form-group MarginTop20 col-md-12">
+                                      <label class="control-label col-md-4 MarginTop10">Recommended Sizes :</label>
+                                      <div class="col-md-6">
+                                        <select class="form-control">
+                                          <option value="">14 X 14</option>
+                                          <option value="">24 X 14</option>
+                                          <option value="">24 X 18</option>
+                                        </select>
+                                      </div>
+                                  </div>
+                                  <div class="font-style clearfix pull-left MarginLeft15">
+                                      <h4>14 X 14</h4>
+                                      <h4>24 X 14</h4>
+                                      <h4>24 X 18</h4>
+                                  </div>
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                  <div class="imgpreview">
+                                        <img src="images/57080.jpg" class="img-responsive"/>
+                                  </div>
+                                </div>
+                            		</div>
+                            		<div id="tab2" class="tab-slider--body clearfix">
                                   <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                                   <div class="form-group MarginTop20 col-md-12">
                                       <label class="control-label col-md-4 MarginTop10">Default Font :</label>
@@ -573,7 +607,7 @@
                                   </div>
                                 </div>
                             		</div>
-                            		<div id="tab2" class="tab-slider--body clearfix">
+                            		<div id="tab3" class="tab-slider--body clearfix">
                                   <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                                   <div class="form-group MarginTop20 col-md-12">
                                       <label class="control-label col-md-4 MarginTop10">Default Color :</label>
@@ -624,9 +658,9 @@
                         </div>
                           <div class="row setup-content" id="step-4">
                             <div class="col-md-12">
-                            <div class="col-md-11 col-lg-11 col-sm-12 col-xs-12 MarginTop50">
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 MarginTop20">
                               <div class="table-responsive">
-                                <table class="table table-striped table MarginTop20 table-bordered FilterResults Sizes">
+                                <!-- <table class="table table-striped table MarginTop20 table-bordered FilterResults Sizes">
                                     <thead>
                                         <tr>
                                             <th style="width:60px !important;">
@@ -644,17 +678,17 @@
                                         <tr>
                                             <th colspan="2"></th>
                                             <th>MinSell</th>
-                                            <th>List$</th>
-                                            <th>Sale$</th>
+                                            <th>List $</th>
+                                            <th>Sale $</th>
                                             <th>MinSell</th>
-                                            <th>List$</th>
-                                            <th>Sale$</th>
+                                            <th>List $</th>
+                                            <th>Sale $</th>
                                             <th>MinSell</th>
-                                            <th>List$</th>
-                                            <th>Sale$</th>
+                                            <th>List $</th>
+                                            <th>Sale $</th>
                                             <th>MinSell</th>
-                                            <th>List$</th>
-                                            <th>Sale$</th>
+                                            <th>List $</th>
+                                            <th>Sale $</th>
                                             <th colspan="3"></th>
                                         </tr>
                                     </thead>
@@ -926,20 +960,443 @@
                                         </tr>
 
                                     </tbody>
-                                </table>
+                                </table> -->
+                                <div class="clearfix"></div>
+                                  <div class="panel panel-inverse">
+                                      <div class="panel-heading">
+                                        Size : 11 X 11</div>
+                                      <div class="panel-wrapper collapse in">
+                                         <div class="panel-body Size10X10">
+                                          <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                                           <h5 class="text-uppercase pull-left">Personalized</h5>
+                                           <a href="#"><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c pull-right">Add New</button></a>
+                                           <div class="table-responsive">
+                                           <table class="table table-striped table table-bordered FilterResults Sizes">
+                                              <thead>
+                                                  <tr>
+                                                      <th colspan="3"></th>
+                                                      <th colspan="3" class="text-center">Sale&nbsp;$</th>
+                                                      <th></th>
+                                                  </tr>
+                                              </thead>
+                                              <thead>
+                                                  <tr>
+
+                                                      <th>Default</th>
+                                                      <th>Qty</th>
+                                                      <th>List&nbsp;$</th>
+                                                      <th>$</th>
+                                                      <th>Start&nbsp;Date</th>
+                                                      <th>End&nbsp;Date</th>
+                                                      <th>Actions</th>
+                                                  </tr>
+                                              </thead>
+                                              <tbody>
+                                                  <tr>
+                                                      <td>
+                                                        <div class="radio radio-theme">
+                                                            <input type="radio" name="radio" id="default" value="default" checked="">
+                                                            <label for="default"></label>
+                                                        </div>
+                                                      </td>
+                                                      <td><input type="text" class="form-control" value="2"/></td>
+                                                      <td><input type="text" class="form-control" value="$13.50"/></td>
+                                                      <td><input type="text" class="form-control" value="$10.00"/></td>
+                                                      <td>
+                                                        <div class="input-group">
+                                                          <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                        </div>
+                                                      </td>
+                                                      <td>
+                                                        <div class="input-group">
+                                                          <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                        </div>
+                                                      </td>
+                                                      <td>
+                                                          <a href="javascript:void(0)" title="Delete" data-toggle="tooltip" class="btn-trash btn btn-circle"><i class="fa fa-trash"></i></a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>
+                                                        <div class="radio radio-theme">
+                                                            <input type="radio" name="radio" id="default1" value="default" checked="">
+                                                            <label for="default"></label>
+                                                        </div>
+                                                      </td>
+                                                      <td><input type="text" class="form-control" value="2"/></td>
+                                                      <td><input type="text" class="form-control" value="$13.50"/></td>
+                                                      <td><input type="text" class="form-control" value="$10.00"/></td>
+                                                      <td>
+                                                        <div class="input-group">
+                                                          <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                        </div>
+                                                      </td>
+                                                      <td>
+                                                        <div class="input-group">
+                                                          <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                        </div>
+                                                      </td>
+                                                      <td>
+                                                          <a href="javascript:void(0)" title="Delete" data-toggle="tooltip" class="btn-trash btn btn-circle"><i class="fa fa-trash"></i></a>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>
+                                                        <div class="radio radio-theme">
+                                                            <input type="radio" name="radio" id="default2" value="default">
+                                                            <label for="default"></label>
+                                                        </div>
+                                                      </td>
+                                                      <td><input type="text" class="form-control"/></td>
+                                                      <td><input type="text" class="form-control"/></td>
+                                                      <td><input type="text" class="form-control"/></td>
+                                                      <td>
+                                                        <div class="input-group">
+                                                          <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                        </div>
+                                                      </td>
+                                                      <td>
+                                                        <div class="input-group">
+                                                          <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                        </div>
+                                                      </td>
+                                                      <td>
+                                                          <a href="javascript:void(0)" title="Delete" data-toggle="tooltip" class="btn-trash btn btn-circle"><i class="fa fa-trash"></i></a>
+                                                      </td>
+                                                  </tr>
+                                              </tbody>
+                                           </table>
+                                         </div>
+                                       </div>
+
+                                       <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                                        <h5 class="text-uppercase pull-left">Non Personalized</h5>
+                                        <a href="#"><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c pull-right">Add New</button></a>
+                                        <div class="table-responsive">
+                                        <table class="table table-striped table table-bordered FilterResults Sizes">
+                                           <thead>
+                                               <tr>
+                                                   <th colspan="3"></th>
+                                                   <th colspan="3" class="text-center">Sale&nbsp;$</th>
+                                                   <th></th>
+                                               </tr>
+                                           </thead>
+                                           <thead>
+                                               <tr>
+
+                                                   <th>Default</th>
+                                                   <th>Qty</th>
+                                                   <th>List&nbsp;$</th>
+                                                   <th>$</th>
+                                                   <th>Start&nbsp;Date</th>
+                                                   <th>End&nbsp;Date</th>
+                                                   <th>Actions</th>
+                                               </tr>
+                                           </thead>
+                                           <tbody>
+                                               <tr>
+                                                   <td>
+                                                     <div class="radio radio-theme">
+                                                         <input type="radio" name="radio" id="default3" value="default" checked="">
+                                                         <label for="default"></label>
+                                                     </div>
+                                                   </td>
+                                                   <td><input type="text" class="form-control" value="2"/></td>
+                                                   <td><input type="text" class="form-control" value="$12.50"/></td>
+                                                   <td><input type="text" class="form-control" value="$10.00"/></td>
+                                                   <td>
+                                                     <div class="input-group">
+                                                       <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                     </div>
+                                                   </td>
+                                                   <td>
+                                                     <div class="input-group">
+                                                       <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                     </div>
+                                                   </td>
+                                                   <td>
+                                                       <a href="javascript:void(0)" title="Delete" data-toggle="tooltip" class="btn-trash btn btn-circle"><i class="fa fa-trash"></i></a>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <td>
+                                                     <div class="radio radio-theme">
+                                                         <input type="radio" name="radio" id="default4" value="default">
+                                                         <label for="default"></label>
+                                                     </div>
+                                                   </td>
+                                                   <td><input type="text" class="form-control" value="2"/></td>
+                                                   <td><input type="text" class="form-control" value="$12.50"/></td>
+                                                   <td><input type="text" class="form-control" value="$10.00"/></td>
+                                                   <td>
+                                                     <div class="input-group">
+                                                       <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                     </div>
+                                                   </td>
+                                                   <td>
+                                                     <div class="input-group">
+                                                       <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                     </div>
+                                                   </td>
+                                                   <td>
+                                                       <a href="javascript:void(0)" title="Delete" data-toggle="tooltip" class="btn-trash btn btn-circle"><i class="fa fa-trash"></i></a>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <td>
+                                                     <div class="radio radio-theme">
+                                                         <input type="radio" name="radio" id="default5" value="default" checked="">
+                                                         <label for="default"></label>
+                                                     </div>
+                                                   </td>
+                                                   <td><input type="text" class="form-control"/></td>
+                                                   <td><input type="text" class="form-control"/></td>
+                                                   <td><input type="text" class="form-control"/></td>
+                                                   <td>
+                                                     <div class="input-group">
+                                                       <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                     </div>
+                                                   </td>
+                                                   <td>
+                                                     <div class="input-group">
+                                                       <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                     </div>
+                                                   </td>
+                                                   <td>
+                                                       <a href="javascript:void(0)" title="Delete" data-toggle="tooltip" class="btn-trash btn btn-circle"><i class="fa fa-trash"></i></a>
+                                                   </td>
+                                               </tr>
+                                           </tbody>
+                                        </table>
+                                      </div>
+                                    </div>
+                                         </div>
+                                       </div>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                      <div class="panel panel-inverse">
+                                          <div class="panel-heading">
+                                            Size : 14 X 14</div>
+                                          <div class="panel-wrapper collapse in">
+                                             <div class="panel-body Size10X10">
+                                              <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                                               <h5 class="text-uppercase pull-left">Personalized</h5>
+                                               <a href="#"><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c pull-right">Add New</button></a>
+                                               <div class="table-responsive">
+                                               <table class="table table-striped table table-bordered FilterResults Sizes">
+                                                  <thead>
+                                                      <tr>
+                                                          <th colspan="3"></th>
+                                                          <th colspan="3" class="text-center">Sale&nbsp;$</th>
+                                                          <th></th>
+                                                      </tr>
+                                                  </thead>
+                                                  <thead>
+                                                      <tr>
+                                                          <th>Default</th>
+                                                          <th>Qty</th>
+                                                          <th>List&nbsp;$</th>
+                                                          <th>$</th>
+                                                          <th>Start&nbsp;Date</th>
+                                                          <th>End&nbsp;Date</th>
+                                                          <th>Actions</th>
+                                                      </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                      <tr>
+                                                          <td>
+                                                            <div class="radio radio-theme">
+                                                                <input type="radio" name="radio" id="default6" value="default" checked="">
+                                                                <label for="default"></label>
+                                                            </div>
+                                                          </td>
+                                                          <td><input type="text" class="form-control" value="1"/></td>
+                                                          <td><input type="text" class="form-control" value="$12.00"/></td>
+                                                          <td><input type="text" class="form-control" value="$11.50"/></td>
+                                                          <td>
+                                                            <div class="input-group">
+                                                              <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                            </div>
+                                                          </td>
+                                                          <td>
+                                                            <div class="input-group">
+                                                              <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                            </div>
+                                                          </td>
+                                                          <td>
+                                                              <a href="javascript:void(0)" title="Delete" data-toggle="tooltip" class="btn-trash btn btn-circle"><i class="fa fa-trash"></i></a>
+                                                          </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td>
+                                                            <div class="radio radio-theme">
+                                                                <input type="radio" name="radio" id="default7" value="default">
+                                                                <label for="default"></label>
+                                                            </div>
+                                                          </td>
+                                                          <td><input type="text" class="form-control" value="1"/></td>
+                                                          <td><input type="text" class="form-control" value="$12.00"/></td>
+                                                          <td><input type="text" class="form-control" value="$11.50"/></td>
+                                                          <td>
+                                                            <div class="input-group">
+                                                              <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                            </div>
+                                                          </td>
+                                                          <td>
+                                                            <div class="input-group">
+                                                              <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                            </div>
+                                                          </td>
+                                                          <td>
+                                                              <a href="javascript:void(0)" title="Delete" data-toggle="tooltip" class="btn-trash btn btn-circle"><i class="fa fa-trash"></i></a>
+                                                          </td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td>
+                                                            <div class="radio radio-theme">
+                                                                <input type="radio" name="radio" id="default8" value="default" checked="">
+                                                                <label for="default"></label>
+                                                            </div>
+                                                          </td>
+                                                          <td><input type="text" class="form-control"/></td>
+                                                          <td><input type="text" class="form-control"/></td>
+                                                          <td><input type="text" class="form-control"/></td>
+                                                          <td>
+                                                            <div class="input-group">
+                                                              <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                            </div>
+                                                          </td>
+                                                          <td>
+                                                            <div class="input-group">
+                                                              <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                            </div>
+                                                          </td>
+                                                          <td>
+                                                              <a href="javascript:void(0)" title="Delete" data-toggle="tooltip" class="btn-trash btn btn-circle"><i class="fa fa-trash"></i></a>
+                                                          </td>
+                                                      </tr>
+                                                  </tbody>
+                                               </table>
+                                             </div>
+                                           </div>
+
+                                           <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                                            <h5 class="text-uppercase pull-left">Non Personalized</h5>
+                                            <a href="#"><button type="button" class="fcbtn btn btn-outline btn-primary btn-1c pull-right">Add New</button></a>
+                                            <div class="table-responsive">
+                                            <table class="table table-striped table table-bordered FilterResults Sizes">
+                                               <thead>
+                                                   <tr>
+                                                       <th colspan="3"></th>
+                                                       <th colspan="3" class="text-center">Sale&nbsp;$</th>
+                                                       <th></th>
+                                                   </tr>
+                                               </thead>
+                                               <thead>
+                                                   <tr>
+
+                                                       <th>Default</th>
+                                                       <th>Qty</th>
+                                                       <th>List&nbsp;$</th>
+                                                       <th>$</th>
+                                                       <th>Start&nbsp;Date</th>
+                                                       <th>End&nbsp;Date</th>
+                                                       <th>Actions</th>
+                                                   </tr>
+                                               </thead>
+                                               <tbody>
+                                                   <tr>
+                                                       <td>
+                                                         <div class="radio radio-theme">
+                                                             <input type="radio" name="radio" id="default9" value="default">
+                                                             <label for="default"></label>
+                                                         </div>
+                                                       </td>
+                                                       <td><input type="text" class="form-control" value="1"/></td>
+                                                       <td><input type="text" class="form-control" value="$11.50"/></td>
+                                                       <td><input type="text" class="form-control" value="$11.00"/></td>
+                                                       <td>
+                                                         <div class="input-group">
+                                                           <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                         </div>
+                                                       </td>
+                                                       <td>
+                                                         <div class="input-group">
+                                                           <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                         </div>
+                                                       </td>
+                                                       <td>
+                                                           <a href="javascript:void(0)" title="Delete" data-toggle="tooltip" class="btn-trash btn btn-circle"><i class="fa fa-trash"></i></a>
+                                                       </td>
+                                                   </tr>
+                                                   <tr>
+                                                       <td>
+                                                         <div class="radio radio-theme">
+                                                             <input type="radio" name="radio" id="default10" value="default" checked="">
+                                                             <label for="default"></label>
+                                                         </div>
+                                                       </td>
+                                                       <td><input type="text" class="form-control" value="1"/></td>
+                                                       <td><input type="text" class="form-control" value="$11.50"/></td>
+                                                       <td><input type="text" class="form-control" value="$11.00"/></td>
+                                                       <td>
+                                                         <div class="input-group">
+                                                           <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                         </div>
+                                                       </td>
+                                                       <td>
+                                                         <div class="input-group">
+                                                           <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                         </div>
+                                                       </td>
+                                                       <td>
+                                                           <a href="javascript:void(0)" title="Delete" data-toggle="tooltip" class="btn-trash btn btn-circle"><i class="fa fa-trash"></i></a>
+                                                       </td>
+                                                   </tr>
+                                                   <tr>
+                                                       <td>
+                                                         <div class="radio radio-theme">
+                                                             <input type="radio" name="radio" id="default11" value="default">
+                                                             <label for="default"></label>
+                                                         </div>
+                                                       </td>
+                                                       <td><input type="text" class="form-control"/></td>
+                                                       <td><input type="text" class="form-control"/></td>
+                                                       <td><input type="text" class="form-control"/></td>
+                                                       <td>
+                                                         <div class="input-group">
+                                                           <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                         </div>
+                                                       </td>
+                                                       <td>
+                                                         <div class="input-group">
+                                                           <input type="text" class="form-control datepicker-autoclose" placeholder="mm/dd/yyyy"> <span class="input-group-addon"><i class="icon-calender"></i></span>
+                                                         </div>
+                                                       </td>
+                                                       <td>
+                                                           <a href="javascript:void(0)" title="Delete" data-toggle="tooltip" class="btn-trash btn btn-circle"><i class="fa fa-trash"></i></a>
+                                                       </td>
+                                                   </tr>
+                                               </tbody>
+                                            </table>
+                                          </div>
+                                        </div>
+                                             </div>
+                                           </div>
+                                        </div>
                               </div>
                             </div>
-                            <div class="col-md-1 col-lg-1 col-sm-12 col-xs-12">
+                            <!-- <div class="col-md-1 col-lg-1 col-sm-12 col-xs-12">
                               <div class="imgpreview MarginTop150">
                                     <img src="images/57080.jpg" class="img-responsive"/>
-                              </div>
-                            </div>
+                              </div> -->
                             </div>
                             <div class="col-md-12">
                               <button class="fcbtn btn btn-outline btn-primary btn-1c nextBtn pull-right" type="button">Next</button>
                               <button class="fcbtn btn btn-outline btn-primary btn-1c prevBtn pull-right" type="button">Previous</button>
                             </div>
-                          </div>
+                            </div>
                           <div class="row setup-content" id="step-5">
                             <div class="col-md-12">
                                 <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12 MarginTop50">

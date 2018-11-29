@@ -82,9 +82,15 @@ $(".tab-slider--nav li").click(function() {
   $("#"+activeTab).fadeIn();
 	if($(this).attr("rel") == "tab2"){
 		$('.tab-slider--tabs').addClass('slide');
-	}else{
-		$('.tab-slider--tabs').removeClass('slide');
 	}
+  else if($(this).attr("rel") == "tab3"){
+		$('.tab-slider--tabs').addClass('slide2');
+	}
+  else{
+		$('.tab-slider--tabs').removeClass('slide');
+		$('.tab-slider--tabs').removeClass('slide2');
+	}
+
   $(".tab-slider--nav li").removeClass("active");
   $(this).addClass("active");
 });
